@@ -1,0 +1,56 @@
+@server=http://localhost:4004
+@username=alice
+@password=
+
+
+### Orders
+# @name Orders_GET
+GET {{server}}/odata/v4/order/Orders
+Authorization: Basic {{username}}:{{password}}
+
+
+### Orders
+# @name Orders_POST
+POST {{server}}/odata/v4/order/Orders
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "1945503a-80b9-4e46-a97d-16dce627facd",
+  "amount": 8715943.62,
+  "status": "status-1945503",
+  "customerID": "customerID-1945503"
+}
+
+
+### Orders
+# @name Orders_PATCH
+PATCH {{server}}/odata/v4/order/Orders/1945503a-80b9-4e46-a97d-16dce627facd
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "1945503a-80b9-4e46-a97d-16dce627facd",
+  "amount": 8715943.62,
+  "status": "status-1945503",
+  "customerID": "customerID-1945503"
+}
+
+
+### Orders
+# @name Orders_DELETE
+DELETE {{server}}/odata/v4/order/Orders/1945503a-80b9-4e46-a97d-16dce627facd
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+### Orders
+# @name cancelOrder_POST
+POST {{server}}/odata/v4/order/cancelOrder
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "orderID": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+  "reason": "customer request"
+}
