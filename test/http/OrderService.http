@@ -16,7 +16,7 @@ Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "ID": "1945503a-80b9-4e46-a97d-16dce627facd",
+  # "ID": "1945503a-80b9-4e46-a97d-16dce627facd",
   "amount": 8715943.62,
   "status": "status-1945503",
   "customerID": "customerID-1945503"
@@ -51,6 +51,6 @@ Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "orderID": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+  "orderID": "d5471163-1750-4238-923a-70d9e46676f4",
   "reason": "customer request"
 }
