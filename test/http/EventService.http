@@ -1,0 +1,63 @@
+@server=http://localhost:4004
+@username=alice
+@password=
+
+
+### Orders
+# @name Orders_GET
+GET {{server}}/odata/v4/event/Orders
+Authorization: Basic {{username}}:{{password}}
+
+
+### Orders
+# @name Orders_POST
+POST {{server}}/odata/v4/event/Orders
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  # "ID": "95179039-43bd-4808-886e-374193f98ed2",
+  "book_ID":"b0000001-0000-0000-0000-000000000001",
+  "amount": 999,
+  "status": "status-9517903"
+  # "createdAt": "2004-06-25T15:00:00.000Z",
+  # "createdBy": "createdBy.5o027@example.net",
+  # "modifiedAt": "2020-05-05T15:00:00.000Z",
+  # "modifiedBy": "modifiedBy.5o027@example.com"
+}
+
+
+### Orders
+# @name Orders_PATCH
+PATCH {{server}}/odata/v4/event/Orders/95179039-43bd-4808-886e-374193f98ed2
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  # "ID": "95179039-43bd-4808-886e-374193f98ed2",
+  "amount": 9,
+  "status": "END"
+  # "createdAt": "2004-06-25T15:00:00.000Z",
+  # "createdBy": "createdBy.5o027@example.net",
+  # "modifiedAt": "2020-05-05T15:00:00.000Z",
+  # "modifiedBy": "modifiedBy.5o027@example.com"
+}
+
+
+### Orders
+# @name Orders_DELETE
+DELETE {{server}}/odata/v4/event/Orders/95179039-43bd-4808-886e-374193f98ed2
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+### placeOrder
+# @name placeOrder_POST
+POST {{server}}/odata/v4/event/placeOrder
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "bookID": "b0000001-0000-0000-0000-000000000001",
+  "amount": 6
+}

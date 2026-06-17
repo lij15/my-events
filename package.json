@@ -10,5 +10,12 @@
   "scripts": {
     "start": "cds-serve"
   },
+  "cds": {
+    "requires": {
+      "messaging": {
+        "kind": "file-based-messaging"
+      }
+    }
+  },
   "private": true
 }

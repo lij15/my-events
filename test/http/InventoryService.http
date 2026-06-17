@@ -1,0 +1,52 @@
+@server=http://localhost:4004
+@username=alice
+@password=
+
+
+### Books
+# @name Books_GET
+GET {{server}}/odata/v4/inventory/Books
+Authorization: Basic {{username}}:{{password}}
+
+
+### Books
+# @name Books_POST
+POST {{server}}/odata/v4/inventory/Books
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "15838637-4262-4d6e-a628-bedafa2ad50f",
+  "title": "title-15838637",
+  "price": 7729674.84,
+  "stock": 28,
+  "createdAt": "2001-09-06T15:00:00.000Z",
+  "createdBy": "createdBy.9fh65@example.net",
+  "modifiedAt": "2012-11-14T15:00:00.000Z",
+  "modifiedBy": "modifiedBy.9fh65@example.org"
+}
+
+
+### Books
+# @name Books_PATCH
+PATCH {{server}}/odata/v4/inventory/Books/15838637-4262-4d6e-a628-bedafa2ad50f
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "15838637-4262-4d6e-a628-bedafa2ad50f",
+  "title": "title-15838637",
+  "price": 7729674.84,
+  "stock": 28,
+  "createdAt": "2001-09-06T15:00:00.000Z",
+  "createdBy": "createdBy.9fh65@example.net",
+  "modifiedAt": "2012-11-14T15:00:00.000Z",
+  "modifiedBy": "modifiedBy.9fh65@example.org"
+}
+
+
+### Books
+# @name Books_DELETE
+DELETE {{server}}/odata/v4/inventory/Books/15838637-4262-4d6e-a628-bedafa2ad50f
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
